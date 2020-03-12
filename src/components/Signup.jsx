@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
-import { auth, createUser } from '../firebase/firebase.util';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { auth, createUser } from "../firebase/firebase.util";
 
 class Signup extends Component {
   constructor() {
     super();
 
     this.state = {
-      displayName: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: ""
     };
   }
 
@@ -31,13 +32,13 @@ class Signup extends Component {
       createUser(user, { displayName });
       //clear the form after this is successsful
       this.setState({
-        displayName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
       });
     } catch (error) {
-      console.error('Error', error.message);
+      console.error("Error", error.message);
     }
   };
 
@@ -90,6 +91,9 @@ class Signup extends Component {
           />
           <button type="submit">SIGN UP</button>
         </form>
+        <Link to="/signin">
+          <button>SIGN IN</button>
+        </Link>
       </div>
     );
   }

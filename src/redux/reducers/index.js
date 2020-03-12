@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
+import { setCurrentUserReducer } from "./userReducer";
 
 export default combineReducers({
-  user: () => "Redux is ready to go"
+  user: setCurrentUserReducer
 });

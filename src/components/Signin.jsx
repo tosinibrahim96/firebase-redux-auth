@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { signInWithGoogle, auth } from "../firebase/firebase.util";
 
 export default class SignIn extends Component {
@@ -58,6 +59,10 @@ export default class SignIn extends Component {
             <button onClick={signInWithGoogle} isgoogle="true">
               Sign in with Google
             </button>
+
+            <Link to="/signup">
+              <button>Sign-Up</button>
+            </Link>
           </div>
         </form>
       </div>
