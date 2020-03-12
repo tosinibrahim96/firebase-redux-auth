@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Homepage } from "./components/Homepage";
 import Signup from "./components/Signup";
+import Signin from "./components/Signin";
 
 function App() {
   return (
@@ -9,12 +10,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/signup" component={Signup} />
-        {/* <Route
-          path="/signIn"
-          render={() =>
-            this.props.currentUser ? <Redirect to="/" /> : <AuthPage />
-          }
-        /> */}
+        <Route path="/signin" component={Signin} />
       </Switch>
     </div>
   );
